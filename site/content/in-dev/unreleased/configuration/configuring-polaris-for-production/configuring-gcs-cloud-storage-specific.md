@@ -69,9 +69,7 @@ This two-level permission model ensures both GCS access (via IAM) and Polaris ac
 
 ### Hierarchical Namespace (HNS) Considerations
 
-When using GCS buckets with [Hierarchical Namespace (HNS)](https://cloud.google.com/storage/docs/hns-overview) enabled, additional ACL configuration may be required for credential vending to work properly. If you encounter access issues with HNS-enabled buckets, ensure that the appropriate ACLs are configured on the base path and relevant subpaths for scoped tokens.
-
-For simpler configuration, consider using buckets with HNS disabled and Fine-grained ACLs for access control.
+GCS storage without hierarchical namespaces has been confirmed by the user community to work fine with Polaris. However, issues have been reported for hierarchical namespaces, so they should be considered with caution in production deployments.
 
 ## Troubleshooting
 
